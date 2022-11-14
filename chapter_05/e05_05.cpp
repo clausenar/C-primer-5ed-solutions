@@ -10,15 +10,16 @@ vector<string> scores={"F","D","E","C","B","A","A++"};
 
 string lettergrade;
 
-int grade;
+int grade=79;
 
-while (cin >> grade)
+
 {if (grade<60)
     lettergrade=scores[0];
 else
-    lettergrade=scores[(grade-50)/10];
-
+    {lettergrade=scores[(grade-50)/10];
+    if (grade!=100)
+    lettergrade+=grade%10>7 ? "+": grade%10<3 ? "-":"";
+    }
 cout << lettergrade;}
 }
-
 

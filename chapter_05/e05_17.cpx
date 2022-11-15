@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+
+int main()
+{ 
+   
+vector<int> v2={0,1,1,3};
+vector<int> v1={0,1,1,2,3,5,6};
+int counter{};
+for (size_t i = 0; i < v2.size(); i++)
+{
+    for (size_t j = 0; j < v1.size(); j++)
+    {
+        if (v2[i] == v1[j])
+        {
+            counter++;
+            break;
+        }
+    }
+}
+if (counter == v2.size())
+{
+    cout << "matching";
+    return 1;
+}
+
+else cout << "not matching" ;return 0;
+    
+
+
+}
